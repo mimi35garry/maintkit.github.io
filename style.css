@@ -163,3 +163,26 @@ h1 {
 #equipForm button[type="submit"]:hover {
     background: #005fa3;
 }
+.marque-link {
+    color: #0078d7;
+    font-weight: bold;
+    text-decoration: none;
+    background: #e6f0fa;
+    border-radius: 4px;
+    padding: 0.1em 0.4em;
+    transition: background 0.2s, text-decoration 0.2s;
+}
+.marque-link:hover, .marque-link:focus {
+    background: #cce0f7;
+    text-decoration: underline;
+}
+.delete-equip-btn .delete-icon {
+    pointer-events: none;
+    font-size: 1.3rem;
+    vertical-align: middle;
+    transition: color 0.2s;
+}
+.delete-equip-btn:hover .delete-icon,
+.delete-equip-btn:focus .delete-icon {
+    color: #b71c1c;
+}

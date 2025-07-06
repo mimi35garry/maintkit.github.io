@@ -33,13 +33,57 @@
                     <label for="equipRef">Référence :</label>
                     <input type="text" id="equipRef" name="reference" required>
                     <label for="equipType">Type :</label>
-                    <input type="text" id="equipType" name="type" required>
+                    <select id="equipType" name="type" required>
+                        <option value="capteur">Capteur</option>
+                        <option value="moteur">Moteur</option>
+                        <option value="variateur">Variateur</option>
+                        <option value="automate">Automate</option>
+                        <option value="module de sécurité">Module de sécurité</option>
+                        <option value="autre">Autre...</option>
+                    </select>
+                    <input type="text" id="equipTypeOther" placeholder="Précisez le type" style="display:none;margin-top:0.5rem;">
                     <label for="equipStatus">Statut :</label>
                     <select id="equipStatus" name="status" required>
                         <option value="Actif">Actif</option>
                         <option value="Inactif">Inactif</option>
                     </select>
+                    <label for="equipBrand">Marque :</label>
+                    <input type="text" id="equipBrand" name="marque" required>
+                    <label for="equipLink">Lien :</label>
+                    <input type="url" id="equipLink" name="lien" placeholder="https://...">
                     <button type="submit">Ajouter</button>
+                </form>
+            </div>
+        </div>
+        <div id="editEquipModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeEditModal">&times;</span>
+                <h2>Modifier l'équipement</h2>
+                <form id="editEquipForm">
+                    <label for="editEquipNom">Nom :</label>
+                    <input type="text" id="editEquipNom" name="nom" required>
+                    <label for="editEquipRef">Référence :</label>
+                    <input type="text" id="editEquipRef" name="reference" required>
+                    <label for="editEquipType">Type :</label>
+                    <select id="editEquipType" name="type" required>
+                        <option value="capteur">Capteur</option>
+                        <option value="moteur">Moteur</option>
+                        <option value="variateur">Variateur</option>
+                        <option value="automate">Automate</option>
+                        <option value="module de sécurité">Module de sécurité</option>
+                        <option value="autre">Autre...</option>
+                    </select>
+                    <input type="text" id="editEquipTypeOther" placeholder="Précisez le type" style="display:none;margin-top:0.5rem;">
+                    <label for="editEquipStatus">Statut :</label>
+                    <select id="editEquipStatus" name="status" required>
+                        <option value="Actif">Actif</option>
+                        <option value="Inactif">Inactif</option>
+                    </select>
+                    <label for="editEquipBrand">Marque :</label>
+                    <input type="text" id="editEquipBrand" name="marque" required>
+                    <label for="editEquipLink">Lien :</label>
+                    <input type="url" id="editEquipLink" name="lien" placeholder="https://...">
+                    <button type="submit">Enregistrer</button>
                 </form>
             </div>
         </div>
@@ -50,7 +94,8 @@
                 <th style="padding:0.7rem;border-bottom:1px solid #ccc;">Nom</th>
                 <th style="padding:0.7rem;border-bottom:1px solid #ccc;">Référence</th>
                 <th style="padding:0.7rem;border-bottom:1px solid #ccc;">Type</th>
-                <th style="padding:0.7rem;border-bottom:1px solid #ccc;">Statut</th>
+                <th style="padding:0.7rem;border-bottom:1px solid #ccc;">Marque</th>
+                <th style="padding:0.7rem;border-bottom:1px solid #ccc;"> </th>
             </tr>
         </thead>
         <tbody id="equipTableBody">
